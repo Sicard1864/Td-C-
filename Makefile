@@ -22,10 +22,8 @@ all: clean $(EXECUTABLE) run
 
 # Clean target
 clean:
-	rm -f $(OBJS) $(EXECUTABLE)
+	rm -f *.o $(EXECUTABLE)
 
 # Execute target	
 run:
 	./$(EXECUTABLE)
-	
-
