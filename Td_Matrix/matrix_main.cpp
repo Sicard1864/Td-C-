@@ -6,9 +6,11 @@
 //
 // -- Macro ------------------------------------------------------------------------------------- //
 
-#include"matrix_base.hpp"
-#include "matrix_numerical.hpp"
-#include<iostream>
+#include <iostream>
+
+#include "matrix_base.hpp"
+#include "matrix_num.hpp"
+
 using namespace std;
 
 
@@ -16,7 +18,7 @@ using namespace std;
 
 int main()
 {
-    MatrixNumerical<double> M(3,3);
+    MatrixNum<double> M(3,3);
     M.setElement(0,0,1.2);
     M.setElement(0,1,2);
     M.setElement(0,2,3);
@@ -27,7 +29,7 @@ int main()
     M.setElement(2,1,8);
     M.setElement(2,2,9);
 
-    MatrixNumerical<double> N(3,3);
+    MatrixNum<double> N(3,3);
     N.setElement(0,0,1.2);
     N.setElement(0,1,2);
     N.setElement(0,2,3);
@@ -46,7 +48,7 @@ int main()
     (M.getInverse()).display();
     ((M*M).getInverse()).display();
 
-    MatrixNumerical<double>::getIdentity(5).display();
+    MatrixNum<double>::getIdentity(5).display();
 
     cout << endl << endl;
     return 0;
