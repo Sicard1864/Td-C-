@@ -42,13 +42,14 @@ int main()
 
     (M+N).display();
 
-    cout << endl << "det de M : " << M.getDeterminant();
+    cout << endl << endl << "det de M : " << M.getDeterminant();
 
     M.display();
     (M.getInverse()).display();
-    ((M*M).getInverse()).display();
+    //((M*M).getInverse()).display();
 
     MatrixNum<double>::getIdentity(5).display();
+
 
     cout << endl << endl;
     return 0;

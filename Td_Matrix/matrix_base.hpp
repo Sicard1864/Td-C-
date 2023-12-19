@@ -31,7 +31,7 @@ class MatrixBase
         void display() const;
         ostream& displayOn(ostream&) const;
 
-    private:
+    protected:
     // attributes -------------- //
         vector<vector<T>> data;
         size_t rows, cols;
@@ -66,7 +66,7 @@ T MatrixBase<T>::getElement(size_t row, size_t col) const {
         return data[row][col];
     } else {
         cout << "Invalid indices." << endl;
-        return T();                         // Retourne une valeur par défauts
+        return T();     // Retourne une valeur par défauts
     }
 }
 
@@ -86,7 +86,7 @@ size_t MatrixBase<T>::getCols() const {
 template <typename T>
 string MatrixBase<T>::toString() const {
     ostringstream oss;
-    oss << fixed << setprecision(1);        // affiche une précision d'un chiffre après la virgule
+    oss << fixed << setprecision(1);   // affiche une précision d'un chiffre après la virgule
     oss << "[";
     for (size_t i = 0; i < rows; ++i) {
         if (i > 0) {
@@ -117,5 +117,8 @@ template <typename T>
 ostream& MatrixBase<T>::displayOn(ostream& os) const {
     return os << endl << toString();
 }
+
+
+// -- END --------------------------------------------------------------------------------------- //
 
 #endif
